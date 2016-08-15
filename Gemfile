@@ -27,7 +27,16 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby', '3.1.2'
+
+# Some other useful gems
+gem 'faker', '1.1.2'
+
+gem 'will_paginate', '3.0.4'
+
+gem 'bootstrap-will_paginate', '0.0.9'
+
+gem 'bootstrap-sass', '2.3.2.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
