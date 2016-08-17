@@ -3,8 +3,6 @@ source 'https://gems.ruby-china.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,8 +18,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -46,4 +42,19 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+gem 'sqlite3', '1.3.11'
+end	
 
+group :test do
+gem 'selenium-webdriver', '~> 2.35.1'
+gem 'capybara', '2.2.0'
+gem 'factory_girl_rails', '4.2.1'
+end
+
+group :doc do
+gem 'sdoc', require: false
+end
+group :production do
+gem 'pg', '0.18.4'
+end
